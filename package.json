@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install && husky add .husky/commit-msg \"npx --no-install commitlint --edit \"$1\"\"",
+    "git:stage": "git add",
+    "git:commit": "cz",
+    "git:push": "git push --follow-tags origin dev",
+    "release:pre": "standard-version --prerelease --sign",
+    "release:patch": "standard-version --release-as patch --sign",
+    "release:minor": "standard-version --release-as minor --sign",
+    "release:major": "standard-version --release-as major --sign",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -12,6 +20,7 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "core-js": "^3.6.5",
+    "cz-conventional-changelog": "^3.3.0",
     "register-service-worker": "^1.7.1",
     "roboto-fontface": "*",
     "vue": "^2.6.11",
@@ -38,15 +47,22 @@
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.3",
     "chai": "^4.1.2",
+    "commitizen": "^4.2.4",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.12.0",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
+    "standard-version": "^9.3.2",
     "typescript": "~4.1.5",
     "vue-cli-plugin-vuetify": "~2.4.5",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
