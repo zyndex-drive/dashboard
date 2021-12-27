@@ -2,6 +2,16 @@
   "name": "dashboard",
   "version": "0.1.1-1",
   "private": false,
+  "author": {
+    "email": "hello@sudharhshan.tk",
+    "name": "Sudharshan TK",
+    "url": "https://sudharshan.tk"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyndex-drive/dashboard.git"
+  },
   "scripts": {
     "prepare": "husky install && npx husky add .husky/commit-msg \"npx --no-install commitlint --edit '$1'\"",
     "git:stage": "git add",
