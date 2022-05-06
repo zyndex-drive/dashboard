@@ -1,6 +1,6 @@
 {
   "name": "dashboard",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "private": true,
   "scripts": {
     "prepare": "husky install && husky add .husky/commit-msg \"npx --no-install commitlint --edit \"$1\"\"",
