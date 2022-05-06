@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install && husky add .husky/commit-msg \"npx --no-install commitlint --edit \"$1\"\"",
+    "git:stage": "git add",
+    "git:commit": "cz",
+    "git:push": "git push --follow-tags origin dev",
+    "release:pre": "standard-version --prerelease --sign",
+    "release:patch": "standard-version --release-as patch --sign",
+    "release:minor": "standard-version --release-as minor --sign",
+    "release:major": "standard-version --release-as major --sign",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -19,21 +27,42 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@types/prettier": "^2",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-vue": "^8.7.1",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "standard-version": "^9.3.2",
     "vue-cli-plugin-vuetify": "~2.4.8",
     "vue-template-compiler": "^2.6.14",
     "vuetify-loader": "^1.7.0"
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "packageManager": "yarn@3.2.0"
 }
