@@ -21,9 +21,8 @@
   },
   "plugins": ["vue"],
   "rules": {
-    "require-jsdoc": "off",
-    "valid-jsdoc": "off",
     "vue/html-indent": "off",
+    "vue/html-self-closing": "off",
     "semi": "off",
     "space-before-function-paren": "off",
     "vue/max-attributes-per-line": "off",

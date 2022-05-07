@@ -14,7 +14,7 @@
       "@styles/*": ["src/styles/*"],
       "@t/*": ["src/templates/*"],
       "@v/*": ["src/views/*"],
-      "@state": ["src/plugins/state/index.js"]
+      "@state": ["src/plugins/store/index.js"]
     }
   },
   "typeAcquisition": {
