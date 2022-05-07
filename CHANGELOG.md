@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1-4](https://github.com/zyndex-drive/dashboard/compare/v0.1.1-3...v0.1.1-4) (2022-05-07)
+
+
+### Build System 🏗
+
+* add all the base configs, template files from template ([e7f39cf](https://github.com/zyndex-drive/dashboard/commit/e7f39cf5ec47b4d8ba9a52aabd1faf6be0aec3e9))
+* update husky hook file ([345ab15](https://github.com/zyndex-drive/dashboard/commit/345ab1597946dd50f0980ee661de30cd58956eeb))
+
 ### [0.1.1-3](https://github.com/zyndex-drive/dashboard/compare/v0.1.1-2...v0.1.1-3) (2022-05-06)
 
 
